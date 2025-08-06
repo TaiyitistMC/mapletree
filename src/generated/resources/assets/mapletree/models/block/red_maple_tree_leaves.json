@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mapletree:block/red_maple_tree_leaves"
+  }
+}
