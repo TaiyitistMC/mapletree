@@ -16,5 +16,9 @@ public class ModLanguageProviderJa extends LanguageProvider {
         add("itemGroup.maple_tree", "モミジ・農業");
         add(ModBlocks.RED_MAPLE_TREE_LEAVES.get(), "モミジ葉[赤]");
         add(ModBlocks.MAPLE_TREE_LOG.get(), "モミジ原木");
+        add(ModBlocks.YELLOW_MAPLE_TREE_LEAVES.get(), "モミジ葉[黄]");
+        add(ModBlocks.ORANGE_MAPLE_TREE_LEAVES.get(), "モミジ葉[橙]");
+        add(ModBlocks.LIME_MAPLE_TREE_LEAVES.get(), "モミジ葉[黄緑]");
+        add(ModBlocks.RED_MAPLE_TREE_SAPLING.get(), "モミジ苗木[赤]");
     }
 }

@@ -1,5 +1,9 @@
 {
+  "block.mapletree.lime_maple_tree_leaves": "モミジ葉[黄緑]",
   "block.mapletree.maple_tree_log": "モミジ原木",
+  "block.mapletree.orange_maple_tree_leaves": "モミジ葉[橙]",
   "block.mapletree.red_maple_tree_leaves": "モミジ葉[赤]",
+  "block.mapletree.red_maple_tree_sapling": "モミジ苗木[赤]",
+  "block.mapletree.yellow_maple_tree_leaves": "モミジ葉[黄]",
   "itemGroup.maple_tree": "モミジ・農業"
 }

@@ -27,6 +27,8 @@ public class MapleTreeClient {
         ModBlocks.BLOCKS.getEntries().forEach(blockDeferredHolder -> {
             if (blockDeferredHolder.get().getDescriptionId().contains("leaves")) {
                 ItemBlockRenderTypes.setRenderLayer(blockDeferredHolder.get(), RenderType.cutoutMipped());
+            }else if (blockDeferredHolder.get().getDescriptionId().contains("sapling")) {
+                ItemBlockRenderTypes.setRenderLayer(blockDeferredHolder.get(), RenderType.cutoutMipped());
             }
         });
     }
