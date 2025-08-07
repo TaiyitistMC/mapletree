@@ -28,3 +28,12 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+      - name: Upload Release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          allowUpdates: true
+          makeLatest: true
+          removeArtifacts: true
+          tag: "1.21.1-release"
+          artifacts: ./build/libs/*.jar
+          token: ${{ secrets.GITHUB_TOKEN }}

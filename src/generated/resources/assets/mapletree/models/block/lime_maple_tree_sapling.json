@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mapletree:block/lime_maple_tree_sapling"
+  }
+}

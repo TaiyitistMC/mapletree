@@ -42,5 +42,8 @@ public class ModDataGenerator {
         event.addProvider(new DatapackBuiltinEntriesProvider(pack,
                 lookup, BUILDER,
                 Set.of(MapleTree.MODID)));
+        ModBlockTagsProvider blockTagsProvider = new ModBlockTagsProvider(pack, lookup, helper);
+        event.addProvider(blockTagsProvider);
+        event.addProvider(new ModItemTagsProvider(pack, lookup, blockTagsProvider.contentsGetter(), helper));
     }
 }

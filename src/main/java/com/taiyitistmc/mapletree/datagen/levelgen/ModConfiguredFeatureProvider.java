@@ -20,9 +20,30 @@ public class ModConfiguredFeatureProvider {
 
     public static final ResourceKey<ConfiguredFeature<?,?>> RED_MAPLE_TREE =
             register("red_maple_tree");
+    public static final ResourceKey<ConfiguredFeature<?,?>> YELLOW_MAPLE_TREE =
+            register("yellow_maple_tree");
+    public static final ResourceKey<ConfiguredFeature<?,?>> ORANGE_MAPLE_TREE =
+            register("orange_maple_tree");
+    public static final ResourceKey<ConfiguredFeature<?,?>> LIME_MAPLE_TREE =
+            register("lime_maple_tree");
+    public static final ResourceKey<ConfiguredFeature<?,?>> RED_MAPLE_TREE_MOUNTAIN =
+            register("red_maple_tree_mountain");
+    public static final ResourceKey<ConfiguredFeature<?,?>> YELLOW_MAPLE_TREE_MOUNTAIN =
+            register("yellow_maple_tree_mountain");
+    public static final ResourceKey<ConfiguredFeature<?,?>> ORANGE_MAPLE_TREE_MOUNTAIN =
+            register("orange_maple_tree_mountain");
+    public static final ResourceKey<ConfiguredFeature<?,?>> LIME_MAPLE_TREE_MOUNTAIN =
+            register("lime_maple_tree_mountain");
 
     public static void configuredFeatures(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         FeatureUtils.register(context, RED_MAPLE_TREE, Feature.TREE, createMapleTree(ModBlocks.RED_MAPLE_TREE_LEAVES.get()).build());
+        FeatureUtils.register(context, YELLOW_MAPLE_TREE, Feature.TREE, createMapleTree(ModBlocks.YELLOW_MAPLE_TREE_LEAVES.get()).build());
+        FeatureUtils.register(context, ORANGE_MAPLE_TREE, Feature.TREE, createMapleTree(ModBlocks.ORANGE_MAPLE_TREE_LEAVES.get()).build());
+        FeatureUtils.register(context, LIME_MAPLE_TREE, Feature.TREE, createMapleTree(ModBlocks.LIME_MAPLE_TREE_LEAVES.get()).build());
+        FeatureUtils.register(context, RED_MAPLE_TREE_MOUNTAIN, Feature.TREE, createMapleTree(ModBlocks.RED_MAPLE_TREE_LEAVES.get()).build());
+        FeatureUtils.register(context, YELLOW_MAPLE_TREE_MOUNTAIN, Feature.TREE, createMapleTree(ModBlocks.YELLOW_MAPLE_TREE_LEAVES.get()).build());
+        FeatureUtils.register(context, ORANGE_MAPLE_TREE_MOUNTAIN, Feature.TREE, createMapleTree(ModBlocks.ORANGE_MAPLE_TREE_LEAVES.get()).build());
+        FeatureUtils.register(context, LIME_MAPLE_TREE_MOUNTAIN, Feature.TREE, createMapleTree(ModBlocks.LIME_MAPLE_TREE_LEAVES.get()).build());
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> register(String name) {
@@ -30,7 +51,7 @@ public class ModConfiguredFeatureProvider {
     }
 
     private static TreeConfiguration.TreeConfigurationBuilder createMapleTree(Block leavesBlock) {
-        return createStraightBlobTree(ModBlocks.MAPLE_TREE_LOG.get(), leavesBlock, 6, 2, 0, 2).ignoreVines();
+        return createStraightBlobTree(ModBlocks.MAPLE_TREE_LOG.get(), leavesBlock, 5, 2, 0, 2).ignoreVines();
     }
 
     private static TreeConfiguration.TreeConfigurationBuilder createStraightBlobTree(Block logBlock, Block leavesBlock, int baseHeight, int heightRandA, int heightRandB, int radius) {

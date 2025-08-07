@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
   "biomes": "#c:is_forest",
-  "features": "mapletree:red_maple_trees_placed",
+  "features": "mapletree:yellow_maple_tree_placed",
   "step": "vegetal_decoration"
 }

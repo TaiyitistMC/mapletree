@@ -30,6 +30,12 @@ public class ModBlocks {
             register("lime_maple_tree_leaves", MapleTreeLeavesBlock::new);
     public static final DeferredBlock<Block> RED_MAPLE_TREE_SAPLING =
             register("red_maple_tree_sapling", () -> new MapleTreeSaplingBlock("red_maple_tree", ModConfiguredFeatureProvider.RED_MAPLE_TREE));
+    public static final DeferredBlock<Block> YELLOW_MAPLE_TREE_SAPLING =
+            register("yellow_maple_tree_sapling", () -> new MapleTreeSaplingBlock("yellow_maple_tree", ModConfiguredFeatureProvider.YELLOW_MAPLE_TREE));
+    public static final DeferredBlock<Block> ORANGE_MAPLE_TREE_SAPLING =
+            register("orange_maple_tree_sapling", () -> new MapleTreeSaplingBlock("orange_maple_tree", ModConfiguredFeatureProvider.ORANGE_MAPLE_TREE));
+    public static final DeferredBlock<Block> LIME_MAPLE_TREE_SAPLING =
+            register("lime_maple_tree_sapling", () -> new MapleTreeSaplingBlock("lime_maple_tree", ModConfiguredFeatureProvider.LIME_MAPLE_TREE));
 
     public static DeferredBlock<Block> register(String name, BlockBehaviour.Properties properties) {
         var block = BLOCKS.registerSimpleBlock(name, properties);

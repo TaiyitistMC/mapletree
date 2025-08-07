@@ -1,9 +1,12 @@
 {
   "block.mapletree.lime_maple_tree_leaves": "Lime Maple Tree Leaves",
+  "block.mapletree.lime_maple_tree_sapling": "Lime Maple Tree Sapling",
   "block.mapletree.maple_tree_log": "Maple Tree Log",
   "block.mapletree.orange_maple_tree_leaves": "Orange Maple Tree Leaves",
+  "block.mapletree.orange_maple_tree_sapling": "Orange Maple Tree Sapling",
   "block.mapletree.red_maple_tree_leaves": "Red Maple Tree Leaves",
   "block.mapletree.red_maple_tree_sapling": "Red Maple Tree Sapling",
   "block.mapletree.yellow_maple_tree_leaves": "Yellow Maple Tree Leaves",
+  "block.mapletree.yellow_maple_tree_sapling": "Yellow Maple Tree Sapling",
   "itemGroup.maple_tree": "MapleTree and agriculture"
 }

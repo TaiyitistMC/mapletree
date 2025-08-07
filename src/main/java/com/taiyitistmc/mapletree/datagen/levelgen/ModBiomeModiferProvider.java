@@ -16,8 +16,38 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModBiomeModiferProvider {
 
-    public static final ResourceKey<BiomeModifier> ADD_RED_MAPLE_TREE = register("add_red_maple_tree");
-    public static final ResourceKey<BiomeModifier> ADD_RED_MAPLE_TREES = register("add_red_maple_trees");
+    public static final ResourceKey<BiomeModifier> ADD_RED_MAPLE_TREE =
+            register("add_red_maple_tree");
+    public static final ResourceKey<BiomeModifier> ADD_RED_MAPLE_TREES =
+            register("add_red_maple_trees");
+    public static final ResourceKey<BiomeModifier> ADD_YELLOW_MAPLE_TREE =
+            register("add_yellow_maple_tree");
+    public static final ResourceKey<BiomeModifier> ADD_YELLOW_MAPLE_TREES =
+            register("add_yellow_maple_trees");
+    public static final ResourceKey<BiomeModifier> ADD_ORANGE_MAPLE_TREE =
+            register("add_orange_maple_tree");
+    public static final ResourceKey<BiomeModifier> ADD_ORANGE_MAPLE_TREES =
+            register("add_orange_maple_trees");
+    public static final ResourceKey<BiomeModifier> ADD_LIME_MAPLE_TREE =
+            register("add_lime_maple_tree");
+    public static final ResourceKey<BiomeModifier> ADD_LIME_MAPLE_TREES =
+            register("add_lime_maple_trees");
+    public static final ResourceKey<BiomeModifier> ADD_RED_MAPLE_TREE_MOUNTAIN =
+            register("add_red_maple_tree_mountain");
+    public static final ResourceKey<BiomeModifier> ADD_RED_MAPLE_TREES_MOUNTAIN =
+            register("add_red_maple_trees_mountain");
+    public static final ResourceKey<BiomeModifier> ADD_YELLOW_MAPLE_TREE_MOUNTAIN =
+            register("add_yellow_maple_tree_mountain");
+    public static final ResourceKey<BiomeModifier> ADD_YELLOW_MAPLE_TREES_MOUNTAIN =
+            register("add_yellow_maple_trees_mountain");
+    public static final ResourceKey<BiomeModifier> ADD_ORANGE_MAPLE_TREE_MOUNTAIN =
+            register("add_orange_maple_tree_mountain");
+    public static final ResourceKey<BiomeModifier> ADD_ORANGE_MAPLE_TREES_MOUNTAIN =
+            register("add_orange_maple_trees_mountain");
+    public static final ResourceKey<BiomeModifier> ADD_LIME_MAPLE_TREE_MOUNTAIN =
+            register("add_lime_maple_tree_mountain");
+    public static final ResourceKey<BiomeModifier> ADD_LIME_MAPLE_TREES_MOUNTAIN =
+            register("add_lime_maple_trees_mountain");
 
     public static void addBiomeModifiers(BootstrapContext<BiomeModifier> context) {
         HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
@@ -26,9 +56,33 @@ public class ModBiomeModiferProvider {
                 biomes.getOrThrow(Tags.Biomes.IS_FOREST),
                 HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.RED_MAPLE_TREE_PLACED)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
-        context.register(ADD_RED_MAPLE_TREES, new BiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_YELLOW_MAPLE_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_FOREST),
-                HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.RED_MAPLE_TREES_PLACED)),
+                HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.YELLOW_MAPLE_TREE_PLACED)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_ORANGE_MAPLE_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_FOREST),
+                HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.ORANGE_MAPLE_TREE_PLACED)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_LIME_MAPLE_TREE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_FOREST),
+                HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.LIME_MAPLE_TREE_PLACED)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_RED_MAPLE_TREE_MOUNTAIN, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_MOUNTAIN),
+                HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.RED_MAPLE_TREE_PLACED_MOUNTAIN)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_YELLOW_MAPLE_TREE_MOUNTAIN, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_MOUNTAIN),
+                HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.YELLOW_MAPLE_TREE_PLACED_MOUNTAIN)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_ORANGE_MAPLE_TREE_MOUNTAIN, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_MOUNTAIN),
+                HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.ORANGE_MAPLE_TREE_PLACED_MOUNTAIN)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(ADD_LIME_MAPLE_TREE_MOUNTAIN, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_MOUNTAIN),
+                HolderSet.direct(features.getOrThrow(ModPlacedFeatureProvider.LIME_MAPLE_TREE_PLACED_MOUNTAIN)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     }
 

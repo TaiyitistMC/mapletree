@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mapletree:block/yellow_maple_tree_sapling"
+  }
+}
