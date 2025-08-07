@@ -6,9 +6,9 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 
-public class MapleTreeLogBlock extends RotatedPillarBlock {
+public class SyrupMapleTreeLogBlock extends RotatedPillarBlock {
 
-    public MapleTreeLogBlock(MapColor topMapColor, MapColor sideMapColor) {
+    public SyrupMapleTreeLogBlock(MapColor topMapColor, MapColor sideMapColor) {
         super(Properties.of().mapColor((p_152624_) -> p_152624_.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y ? topMapColor : sideMapColor).instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava());
     }
 }
