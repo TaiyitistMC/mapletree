@@ -164,12 +164,3 @@ idea {
         downloadJavadoc = true
     }
 }
-
-tasks.register('cleanBuild') {
-    doFirst {
-        project.file("build/libs").deleteDir()
-    }
-    doFirst {
-        project.file("build/devlibs").deleteDir()
-    }
-}
