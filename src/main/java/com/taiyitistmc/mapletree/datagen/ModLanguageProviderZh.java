@@ -23,5 +23,6 @@ public class ModLanguageProviderZh extends LanguageProvider {
         add(ModBlocks.YELLOW_MAPLE_TREE_SAPLING.get(), "枫树苗（黄）");
         add(ModBlocks.ORANGE_MAPLE_TREE_SAPLING.get(), "枫树苗（橙）");
         add(ModBlocks.LIME_MAPLE_TREE_SAPLING.get(), "枫树苗（黄绿）");
+        add(ModBlocks.MAPLE_TREE_PLANKS.get(), "枫树木板");
     }
 }

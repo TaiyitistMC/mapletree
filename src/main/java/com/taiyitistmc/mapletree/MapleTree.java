@@ -18,7 +18,6 @@ public class MapleTree {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public MapleTree(IEventBus modEventBus, ModContainer modContainer) {
-
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);

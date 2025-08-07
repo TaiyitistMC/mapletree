@@ -27,6 +27,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 logBlock(mapleTreeLogBlock);
             } else if (block.get().getDescriptionId().contains("sapling")) {
                 crossBlock(block.get());
+            }else {
+                simpleBlock(block.get());
             }
         });
     }

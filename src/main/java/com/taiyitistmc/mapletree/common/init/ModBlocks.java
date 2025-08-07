@@ -1,12 +1,14 @@
 package com.taiyitistmc.mapletree.common.init;
 
 import com.taiyitistmc.mapletree.MapleTree;
+import com.taiyitistmc.mapletree.common.block.EggplantCropBlock;
 import com.taiyitistmc.mapletree.common.block.MapleTreeLeavesBlock;
 import com.taiyitistmc.mapletree.common.block.MapleTreeLogBlock;
 import com.taiyitistmc.mapletree.common.block.MapleTreeSaplingBlock;
 import com.taiyitistmc.mapletree.datagen.levelgen.ModConfiguredFeatureProvider;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -20,6 +22,14 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> MAPLE_TREE_LOG =
             register("maple_tree_log", () -> new MapleTreeLogBlock(MapColor.COLOR_RED, MapColor.PODZOL));
+    public static final DeferredBlock<Block> MAPLE_TREE_PLANKS =
+            register("maple_tree_planks",
+                    () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
+    /*
+    public static final DeferredBlock<Block> EGGPLANT_CROP =
+            register("eggplant_crop", EggplantCropBlock::new);*/
+
+    // Saplings
     public static final DeferredBlock<Block> RED_MAPLE_TREE_LEAVES =
             register("red_maple_tree_leaves", MapleTreeLeavesBlock::new);
     public static final DeferredBlock<Block> YELLOW_MAPLE_TREE_LEAVES =

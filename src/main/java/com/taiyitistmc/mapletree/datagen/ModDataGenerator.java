@@ -4,6 +4,7 @@ import com.taiyitistmc.mapletree.MapleTree;
 import com.taiyitistmc.mapletree.datagen.levelgen.ModBiomeModiferProvider;
 import com.taiyitistmc.mapletree.datagen.levelgen.ModConfiguredFeatureProvider;
 import com.taiyitistmc.mapletree.datagen.levelgen.ModPlacedFeatureProvider;
+import com.taiyitistmc.mapletree.datagen.loot.ModLootTableProvider;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -45,5 +46,6 @@ public class ModDataGenerator {
         ModBlockTagsProvider blockTagsProvider = new ModBlockTagsProvider(pack, lookup, helper);
         event.addProvider(blockTagsProvider);
         event.addProvider(new ModItemTagsProvider(pack, lookup, blockTagsProvider.contentsGetter(), helper));
+        event.addProvider(new ModLootTableProvider(pack, lookup));
     }
 }

@@ -23,5 +23,6 @@ public class ModLanguageProviderJa extends LanguageProvider {
         add(ModBlocks.YELLOW_MAPLE_TREE_SAPLING.get(), "モミジ苗木[黄]");
         add(ModBlocks.ORANGE_MAPLE_TREE_SAPLING.get(), "モミジ苗木[橙]");
         add(ModBlocks.LIME_MAPLE_TREE_SAPLING.get(), "モミジ苗木[黄緑]");
+        add(ModBlocks.MAPLE_TREE_PLANKS.get(), "モミジ木材のかけら");
     }
 }
