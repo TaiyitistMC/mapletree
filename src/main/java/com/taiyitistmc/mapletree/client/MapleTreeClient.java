@@ -1,6 +1,7 @@
 package com.taiyitistmc.mapletree.client;
 
 import com.taiyitistmc.mapletree.MapleTree;
+import com.taiyitistmc.mapletree.common.block.MapleTreeLeavesBlock;
 import com.taiyitistmc.mapletree.common.init.ModBlocks;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -25,8 +26,8 @@ public class MapleTreeClient {
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void registerBlockClients(FMLClientSetupEvent event) {
         ModBlocks.BLOCKS.getEntries().forEach(blockDeferredHolder -> {
-            if (blockDeferredHolder.get().getDescriptionId().contains("leaves")) {
-                ItemBlockRenderTypes.setRenderLayer(blockDeferredHolder.get(), RenderType.cutoutMipped());
+            if (blockDeferredHolder.get() instanceof MapleTreeLeavesBlock leavesBlock) {
+                ItemBlockRenderTypes.setRenderLayer(leavesBlock, ItemBlockRenderTypes.renderCutout ? RenderType.cutoutMipped() : RenderType.solid());
             }else if (blockDeferredHolder.get().getDescriptionId().contains("sapling")) {
                 ItemBlockRenderTypes.setRenderLayer(blockDeferredHolder.get(), RenderType.cutoutMipped());
             }
